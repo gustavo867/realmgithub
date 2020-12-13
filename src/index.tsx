@@ -1,13 +1,10 @@
-import React, { useEffect } from 'react';
-import { StatusBar, StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StatusBar } from 'react-native';
 
 import './config/ReactotronConfig';
+import Main from './screens/Main';
 
 const App: React.FC = () => {
-  useEffect(() => {
-    console.tron.log('Hello');
-  }, []);
-
   return (
     <>
       <StatusBar
@@ -15,24 +12,9 @@ const App: React.FC = () => {
         translucent
         barStyle="light-content"
       />
-      <View style={styles.container}>
-        <Text style={styles.title}>Hello</Text>
-      </View>
+      <Main />
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#7159c1',
-  },
-  title: {
-    fontSize: 30,
-    color: '#FFF',
-  },
-});
 
 export default App;
